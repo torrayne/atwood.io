@@ -1,0 +1,21 @@
+#sidebar {
+    height: 100vh;
+    padding: 60px 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    border-right: 1px solid #ddd;
+
+    .photo {
+        border-radius: 5px;
+    }
+
+    textarea {
+        resize: none;
+        max-height: 100px;
+    }
+}
