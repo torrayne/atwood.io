@@ -8,6 +8,7 @@
     background-color: #fff;
     background-image: linear-gradient(#fffb, #fffb), url("/img/double-bubble-outline.png");
     box-shadow: 0 0 6px #0001;
+    z-index: 1;
 
     .photo {
         width: 150px;
@@ -42,15 +43,21 @@
     @media (max-width: 775px) {
         display: grid;
         grid-template-columns: 175px 1fr;
-        grid-gap: 15px;
+        grid-gap: 0 15px;
 
         .photo {
             width: 100%;
+            grid-row: span 4;
         }
 
         .contact {
             display: none;
         }
+    }
+
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
     }
 
     button[type="submit"] {
