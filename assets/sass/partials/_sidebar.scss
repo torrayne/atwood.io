@@ -1,17 +1,36 @@
 #sidebar {
     height: 100vh;
-    padding: 60px 40px;
+    padding: 40px 40px;
     box-sizing: border-box;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    overflow: scroll;
 
     border-right: 1px solid #ddd;
 
+    background: #fff;
+    box-shadow: 0 0 6px #0001;
+
     .photo {
+        flex-grow: 1;
+        display: block;
         border-radius: 5px;
+    }
+
+    .description {
+        margin-top: 0;
+    }
+
+    .subtitle {
+        margin-top: 10px;
+    }
+
+    .info {
+        padding-left: 10px;
+        margin: 0 0 10px;
+        font-size: 0.9rem;
+    }
+
+    form {
+        margin-bottom: 40px;
     }
 
     textarea {

@@ -1,9 +1,17 @@
-<img class="photo" src="https://via.placeholder.com/150" alt="">
-<h3>Daniel Atwood</h3>
-<ul class="info">
-    <li>(423) 402-0449</li>
-    <li>info@atwood.io</li>
-</ul>
+{{ $img := resources.Get "img/profile.png" }}
+{{ $img := $img.Fit "150x150 q100" }}
+
+<img class="photo" src="{{ $img.Permalink }}" alt="">
+<h3 class="name">Daniel Atwood</h3>
+<p class="description">Full Stack Web Developer</p>
+<h4 class="subtitle">Experience in</h4>
+<p class="info">
+    Html, CSS, JavaScript,
+    PHP, Python, GO,
+    WordPress, Hugo, Svelte,
+    Apache, NGINX,
+    MySQL, MariaDB
+</p>
 
 
 <h3>Contact</h3>

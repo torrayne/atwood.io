@@ -12,8 +12,8 @@
 $background: #272822;
 
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito:700&display=swap');
-
+// @import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito:700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat&display=swap');
 
 body {
     min-height: 100vh;
@@ -36,7 +36,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h1 {
+    margin-top: 0;
 }
 
 input,
@@ -49,7 +55,7 @@ button {
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     background: transparent;
     outline: none;
     transition: background 200ms ease;
@@ -69,6 +75,9 @@ aside {
 }
 
 main {
+    height: 100vh;
     flex-grow: 1;
     padding: 40px;
+    box-sizing: border-box;
+    overflow: scroll;
 }

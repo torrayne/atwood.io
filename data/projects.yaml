@@ -1,8 +1,61 @@
 -
-  name: Center for Health Evangelism
--
   name: Wildwood Health Institute 
+  link: https://wildwoodhealth.org
+  img: wildwood-institute.jpg
+  categories: [WordPress, Website]
+-
+  name: Wildwood Lifestyle Center
+  link: https://wildwoodhealth.com
+  img: wildwood-lifestyle-center.jpg
+  categories: [WordPress, Website]
+-
+  name: Center for Health Evangelism
+  link: https://healthevangelism.com
+  img: health-evangelism.jpg
+  categories: [WordPress, Website]
 -
   name: Wildwood SDA Church
+  link: https://wildwoodsdachurch.com/
+  img: wildwood-sda-church.jpg
+  categories: [WordPress, Website]
 -
   name: Outpost Centers International
+  link: https://outpostcenters.org/
+  img: oci.jpg
+  categories: [WordPress, Website]
+-
+  name: Wildwood Health Institute Donation Page
+  src: https://gitlab.com/wildwood-health-institute/landing-pages/give
+  link: https://wildwoodhealth.org/give/
+  img: give.jpg
+  categories: [Svelte, Landing page]
+-
+  name: Wildwood Lifestyle Center DIY Health
+  src: https://gitlab.com/wildwood-health-institute/landing-pages/lifestyle-diy-health
+  link: https://wildwoodhealth.com/diy/
+  img: diy-health.png
+  categories: [Svelte, Landing page]
+-
+  name: Wildwood Natural Food Market
+  src: https://gitlab.com/wildwood-health-institute/landing-pages/market-placeholder
+  link: https://wildwoodhealth.org/wnfm/
+  img: wildwood-natural-food-market.jpg
+  categories: [Gulp, Landing page]
+-
+  name: 7 Thanksgiving Tips
+  src: https://gitlab.com/wildwood-health-institute/landing-pages/market-7-tips
+  link: /market-7-tips/
+  img: market-7-tips.png
+  categories: [Gulp, Landing page]
+-
+  name: Fight Diabetes
+  src: https://gitlab.com/wildwood-health-institute/landing-pages/giving-tuesday---fight-diabetes
+  link: https://wildwoodhealth.org/fight-diabetes/
+  img: fight-diabetes.jpg
+  categories: [Svelte, Landing page]
+-
+  name: Journal of Health
+  src: https://gitlab.com/wildwood-health-institute/journal-of-health-hugo
+  link: https://journalofhealth.org
+  img: journal-of-health.jpg
+  categories: [Hugo, Website]
