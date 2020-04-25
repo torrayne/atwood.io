@@ -1,0 +1,23 @@
+{{ $img := resources.Get "img/profile.png" }}
+{{ $img := $img.Fit "150x150 q100" }}
+
+<img class="photo" src="{{ $img.Permalink }}" alt="">
+<h3 class="name">Daniel Atwood</h3>
+<p class="description">Full Stack Web Developer</p>
+<h4 class="subtitle">Experience in</h4>
+<p class="info">
+    Html, CSS, JavaScript,
+    PHP, Python, GO,
+    WordPress, Hugo, Svelte,
+    Apache, NGINX,
+    MySQL, MariaDB
+</p>
+
+
+<h3>Contact</h3>
+<form method="POST" netlify>
+    <input type="text" name="name" placeholder="Full name" required>
+    <input type="email" name="email" placeholder="Email address" required>
+    <textarea name="message" placeholder="Inquiry" required></textarea>
+    <button type="submit">Submit</button>
+</form>
