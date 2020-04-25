@@ -6,7 +6,7 @@
 -
   name: Wildwood Lifestyle Center
   link: https://wildwoodhealth.com
-  img: wildwood-lifestyle-center.jpg
+  img: wildwood-lifestyle-center.png
   categories: [WordPress, Website]
 -
   name: Center for Health Evangelism
@@ -51,7 +51,7 @@
   name: Fight Diabetes
   src: https://gitlab.com/wildwood-health-institute/landing-pages/giving-tuesday---fight-diabetes
   link: https://wildwoodhealth.org/fight-diabetes/
-  img: fight-diabetes.jpg
+  img: fight-diabetes.png
   categories: [Svelte, Landing page]
 -
   name: Journal of Health

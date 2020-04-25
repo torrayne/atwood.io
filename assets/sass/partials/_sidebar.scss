@@ -1,5 +1,4 @@
 #sidebar {
-    height: 100vh;
     padding: 40px 40px;
     box-sizing: border-box;
     overflow: scroll;
@@ -10,13 +9,14 @@
     box-shadow: 0 0 6px #0001;
 
     .photo {
-        flex-grow: 1;
+        width: 150px;
         display: block;
         border-radius: 5px;
     }
 
     .description {
         margin-top: 0;
+        padding-left: 10px;
     }
 
     .subtitle {
@@ -36,5 +36,19 @@
     textarea {
         resize: none;
         max-height: 100px;
+    }
+
+    @media (max-width: 775px) {
+        display: grid;
+        grid-template-columns: 175px 1fr;
+        grid-gap: 15px;
+
+        .photo {
+            width: 100%;
+        }
+
+        .contact {
+            display: none;
+        }
     }
 }

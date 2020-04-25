@@ -1,8 +1,12 @@
+#projects_wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 #projects {
-    // height: 100vh;
-    // padding: 40px;
-    // box-sizing: border-box;
-    // overflow: scroll;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
@@ -20,9 +24,14 @@
         text-decoration: none;
 
         transition: transform 100ms;
+        background: #fff;
+        box-shadow: 0 0 6px #0001;
 
-        &:hover {
-            transform: scale(1.03);
+
+        @media (min-width: 776px) {
+            &:hover {
+                transform: scale(1.03);
+            }
         }
     }
 
