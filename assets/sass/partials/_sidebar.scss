@@ -5,7 +5,8 @@
 
     border-right: 1px solid #ddd;
 
-    background: #fff;
+    background-color: #fff;
+    background-image: linear-gradient(#fffb, #fffb), url("/img/double-bubble-outline.png");
     box-shadow: 0 0 6px #0001;
 
     .photo {
@@ -49,6 +50,16 @@
 
         .contact {
             display: none;
+        }
+    }
+
+    button[type="submit"] {
+        cursor: pointer;
+
+        transition: background 100ms;
+
+        &:hover {
+            background: #f9f9f0;
         }
     }
 }
