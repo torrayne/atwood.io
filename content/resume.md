@@ -6,4 +6,4 @@ draft: false
 
 {{< link href="/resume.pdf" target="_blank" >}}Open in a new tab{{< /link>}}
 
-{{< frame >}}
+{{< frame src="/resume.pdf" >}}
