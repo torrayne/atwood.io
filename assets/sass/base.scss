@@ -70,7 +70,7 @@ main {
     flex-grow: 1;
     padding: 40px;
     box-sizing: border-box;
-    overflow: scroll;
+    overflow: hidden auto;
 
     background-image: linear-gradient(#f9f9f9bb, #f9f9f9bb), url("/img/y-so-serious-white.png");
     background-repeat: repeat;
