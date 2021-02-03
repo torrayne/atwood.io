@@ -27,7 +27,7 @@
 -
   name: Wildwood Lifestyle Center DIY Health
   src: https://gitlab.com/wildwood-health-institute/landing-pages/lifestyle-diy-health
-  link: https://wildwoodhealth.com/diy/
+  link: /ww-diy-health/
   img: diy-health.png
   categories: [Svelte, Landing page]
 -
