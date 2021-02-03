@@ -19,11 +19,6 @@
   img: wildwood-sda-church.jpg
   categories: [WordPress, Website]
 -
-  name: Outpost Centers International
-  link: https://outpostcenters.org/
-  img: oci.png
-  categories: [WordPress, Website]
--
   name: Wildwood Health Institute Donation Page
   src: https://gitlab.com/wildwood-health-institute/landing-pages/give
   link: https://wildwoodhealth.org/give/
