@@ -1,0 +1,19 @@
+{{ define "main" }}
+<a id="back" href="/">⬅ Back to Projects</a>
+
+<a href="{{ $.Params.link }}" target="_blank" rel="noopener">
+    <h1>{{ .Title }} ⬈</h1>
+</a>
+
+<p>Stack: {{ delimit .Params.categories ", " }}</p>
+
+{{ range first 1 .Params.images }}
+{{ $img := resources.Get . }}
+{{ $img := $img.Resize "600x Linear" }}
+<a href="{{ $.Params.link }}" target="_blank" rel="noopener">
+    <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+</a>
+{{ end }}
+
+{{ .Content }}
+{{ end }}
