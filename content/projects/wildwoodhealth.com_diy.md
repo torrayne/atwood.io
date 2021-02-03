@@ -7,4 +7,6 @@ images:
 link: "/ww-diy-health/"
 categories:
 - "Svelte"
+- "Linux"
+- "NGINX"
 ---

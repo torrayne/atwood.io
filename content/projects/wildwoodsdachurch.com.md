@@ -6,8 +6,8 @@ images:
 - "img/wildwoodsdachurch.com.jpg"
 link: "https://wildwoodsdachurch.com/"
 categories:
+- "WordPress"
 - "Linux"
 - "NGINX"
 - "MariaDB"
-- "WordPress"
 ---

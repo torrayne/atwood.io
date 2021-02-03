@@ -7,4 +7,6 @@ images:
 link: "https://wildwoodhealth.org/give/"
 categories:
 - "Svelte"
+- "Linux"
+- "NGINX"
 ---

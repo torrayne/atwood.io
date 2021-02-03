@@ -7,4 +7,6 @@ images:
 link: "https://wildwoodhealth.org/wnfm/"
 categories:
 - "Gulp"
+- "Linux"
+- "NGINX"
 ---

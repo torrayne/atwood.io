@@ -6,8 +6,8 @@ images:
 - "img/healthevangelism.com.jpg"
 link: "https://healthevangelism.com"
 categories:
+- "WordPress"
 - "Linux"
 - "NGINX"
 - "MariaDB"
-- "WordPress"
 ---

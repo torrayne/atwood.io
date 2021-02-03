@@ -7,4 +7,6 @@ images:
 link: "https://wildwoodhealth.org/fight-diabetes/"
 categories:
 - "Svelte"
+- "Linux"
+- "NGINX"
 ---

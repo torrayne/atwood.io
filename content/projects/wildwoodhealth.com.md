@@ -6,8 +6,8 @@ images:
 - /img/wildwoodhealth.com.png
 link: https://wildwoodhealth.com
 categories:
+- "WordPress"
 - "Linux"
 - "NGINX"
 - "MariaDB"
-- "WordPress"
 ---

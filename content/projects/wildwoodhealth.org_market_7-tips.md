@@ -7,4 +7,6 @@ images:
 link: "/market-7-tips/"
 categories:
 - "Gulp"
+- "Linux"
+- "NGINX"
 ---
