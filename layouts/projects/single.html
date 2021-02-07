@@ -7,7 +7,7 @@
 </header>
 
 <p>Stack:
-    {{- range $index, $value := .Params.categories -}}
+    {{- range $index, $value := sort .Params.categories -}}
     {{ if $index }},{{ end }}
     <a href="/categories/{{ $value | urlize}}">{{ $value }}</a>
     {{- end -}}
