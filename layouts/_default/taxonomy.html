@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div id="projects_wrapper">
+    <header class="reverse">
+        <a id="back" href="/">View all Projects</a>
+        <h1 id="page-title">{{ .Title }}</h1>
+    </header>
+
+    <ol class="categories">
+        {{ range sort .Pages.ByTitle }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ol>
+</div>
+{{ end }}

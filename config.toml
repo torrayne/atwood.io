@@ -1,5 +1,3 @@
 baseURL = "https://atwood.io"
 languageCode = "en-us"
 title = "Daniel Atwood"
-
-disableKinds = ["taxonomy", "taxonomyTerm"]

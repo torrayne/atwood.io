@@ -91,15 +91,22 @@ main {
     }
 }
 
-#back {
-    display: block;
-    transform: translateX(-10px);
+header.reverse {
+    display: flex;
+    flex-flow: column-reverse nowrap;
     margin-bottom: 20px;
-    color: inherit;
-    text-decoration: none;
 }
 
-#page-title {
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+#back + #page-title {
+    margin-bottom: 0;
+}
+
+#page-title a {
     color: inherit;
     text-decoration: none;
 }
@@ -108,4 +115,8 @@ main {
     max-width: 100%;
     border: 1px solid #ccc;
     border-radius: 3px;
+}
+
+.categories {
+    margin-top: 0;
 }

@@ -1,11 +1,18 @@
 {{ define "main" }}
-<a id="back" href="/">⬅ Back to Projects</a>
+<header class="reverse">
+    <a id="back" href="/">View all Projects</a>
+    <h1 id="page-title">
+        <a href="{{ $.Params.link }}" target="_blank" rel="noopener">{{ .Title }} ⬈</a>
+    </h1>
+</header>
 
-<a id="page-title" href="{{ $.Params.link }}" target="_blank" rel="noopener">
-    <h1>{{ .Title }} ⬈</h1>
-</a>
+<p>Stack:
+    {{- range $index, $value := .Params.categories -}}
+    {{ if $index }},{{ end }}
+    <a href="/categories/{{ $value | urlize}}">{{ $value }}</a>
+    {{- end -}}
+</p>
 
-<p>Stack: {{ delimit .Params.categories ", " }}</p>
 
 {{ range first 1 .Params.images }}
 {{ $img := resources.Get . }}
