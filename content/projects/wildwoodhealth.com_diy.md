@@ -5,6 +5,7 @@ draft: false
 images:
 - "img/wildwoodhealth.com_diy.jpg"
 link: "site"
+src: "https://gitlab.com/wildwood-health-institute/landing-pages/lifestyle-diy-health"
 categories:
 - "Svelte"
 - "Linux"

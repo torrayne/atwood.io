@@ -5,6 +5,7 @@ draft: false
 images:
 - "img/wildwoodhealth.org_market_7-tips.jpg"
 link: "site"
+src: "https://gitlab.com/wildwood-health-institute/landing-pages/market-7-tips"
 categories:
 - "Gulp"
 - "Linux"

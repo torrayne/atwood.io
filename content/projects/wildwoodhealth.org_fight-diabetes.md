@@ -5,6 +5,7 @@ draft: false
 images:
 - "img/wildwoodhealth.org_fight-diabetes.jpg"
 link: "https://wildwoodhealth.org/fight-diabetes/"
+src: "https://gitlab.com/wildwood-health-institute/landing-pages/giving-tuesday---fight-diabetes"
 categories:
 - "Svelte"
 - "Linux"
