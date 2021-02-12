@@ -29,7 +29,7 @@
 </head>
 
 <body id="{{ .Kind }}" class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800">
-    <aside class="lg:w-72 flex-shrink-0 max-h-screen overflow-hidden">{{ partial "profile" . }}</aside>
+    <aside class="lg:w-72 flex-shrink-0 max-h-screen overflow-y-auto">{{ partial "profile" . }}</aside>
     <main class="w-full lg:h-screen overflow-x-hidden overflow-y-auto bg-main bg-opacity-25">
         <div class="min-h- p-10">
             <header class="mb-6">
