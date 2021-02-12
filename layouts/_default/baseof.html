@@ -13,14 +13,37 @@
 
     <title>{{ .Site.Title }}</title>
 
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{/* {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}"> */}}
+
+    {{ $styles := resources.Get "css/main.css" | postCSS }}
+    {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+    {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+    {{ end }}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <aside id="sidebar">{{ partial "profile" . }}</aside>
-    <main id="{{ if .IsHome }}home{{ end }}">
-        {{ block "main" . }}{{ end }}
+<body id="{{ .Kind }}" class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800">
+    <aside class="lg:w-72 flex-shrink-0 max-h-screen overflow-hidden">{{ partial "profile" . }}</aside>
+    <main class="w-full lg:h-screen overflow-x-hidden overflow-y-auto bg-main bg-opacity-25">
+        <div class="min-h- p-10">
+            <header class="mb-6">
+                {{ if not .IsHome }}
+                <a class="block mb-2" href="/">⬅ View all Projects</a>
+                {{ end }}
+                <h1 class="mb-2 text-3xl font-display font-bold">
+                    {{ if eq .Kind "term" }}{{ .Section | title }}:{{ end }}
+                    {{ .Title }}
+                </h1>
+                {{ block "header" . }}{{ end }}
+            </header>
+            {{ block "main" . }}{{ end }}
+        </div>
     </main>
 </body>
 

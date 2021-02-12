@@ -1,18 +1,15 @@
-{{ define "main" }}
-<header>
-    <h1 id="page-title">
-        <a href="{{ $.Params.link }}" target="_blank" rel="noopener">{{ .Title }} ⬈</a>
-    </h1>
-    <a href="/">View all Projects</a>
-</header>
-
-<p>Stack:
+{{ define "header" }}
+<p>URL: <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Params.link }} ⬈</a></p>
+<p><a class="hover:underline" href="/categories">Categories</a>:
     {{- range $index, $value := sort .Params.categories -}}
     {{ if $index }},{{ end }}
-    <a href="/categories/{{ $value | urlize}}">{{ $value }}</a>
+    <a class="hover:underline" href="/categories/{{ $value | urlize}}">{{ $value }}</a>
     {{- end -}}
 </p>
+{{ end }}
 
+{{ define "main" }}
+{{ .Content }}
 
 {{ range first 1 .Params.images }}
 {{ $img := resources.Get . }}
@@ -21,6 +18,4 @@
     <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
 </a>
 {{ end }}
-
-{{ .Content }}
 {{ end }}

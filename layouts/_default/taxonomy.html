@@ -1,14 +1,7 @@
 {{ define "main" }}
-<div id="projects_wrapper">
-    <header>
-        <h1 id="page-title">{{ .Title }}</h1>
-        <a href="/">View all Projects</a>
-    </header>
-
-    <ol class="categories">
-        {{ range sort .Pages.ByTitle }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-    </ol>
-</div>
+<ol>
+    {{ range sort .Pages.ByTitle }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ol>
 {{ end }}
