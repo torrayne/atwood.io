@@ -4,19 +4,19 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
 - type: datetime
   name: date
-  label: date
+  label: Date
 - type: text
   name: images
-  label: images
+  label: Images
 - type: text
   name: link
-  label: link
+  label: Link
 - type: text
   name: src
-  label: src
+  label: Repo
 - type: list
   name: categories
-  label: categories
+  label: Categories
