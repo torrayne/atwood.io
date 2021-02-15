@@ -1,6 +1,6 @@
 <div class="grid grid-cols-projects gap-4">
     {{ range .Pages }}
-    <a class="block h-full bg-white border rounded shadow transform transition-transform hover:scale-105"
+    <a class="flex flex-col h-full bg-white border rounded shadow transform transition-transform hover:scale-105"
         href="{{ .Permalink }}">
         {{ range first 1 .Params.images }}
         {{ $img := resources.Get . }}
@@ -8,7 +8,7 @@
         <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
         {{ end }}
 
-        <div class="p-4">
+        <div class="flex flex-col flex-grow justify-between p-4">
             <p class="title">{{ .Title }}</p>
             <div class="mt-4 text-sm">
                 {{ range first 1 .Params.categories }}
