@@ -1,0 +1,22 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: images
+  label: images
+- type: text
+  name: link
+  label: link
+- type: text
+  name: src
+  label: src
+- type: list
+  name: categories
+  label: categories
