@@ -11,11 +11,15 @@
 {{ define "main" }}
 {{ .Content }}
 
-{{ range first 1 .Params.images }}
-{{ $img := resources.Get . }}
-{{ $img := $img.Resize "600x Linear" }}
-<a href="{{ $.Params.link }}" target="_blank" rel="noopener">
-    <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
-</a>
-{{ end }}
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    {{ range where (readDir (printf "assets/%s" .Params.images)) "IsDir" false }}
+    {{ $img := resources.Get (printf "%s/%s" $.Params.images .Name) }}
+    {{ $img := $img.Resize "600x Linear" }}
+    <figure>
+        <caption>{{ index (split .Name ".") 1 }}</caption>
+        <img class="object-contain object-top border" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+    </figure>
+    {{ end }}
+</div>
+
 {{ end }}
