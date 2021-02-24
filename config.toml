@@ -4,3 +4,22 @@ title = "Daniel Atwood"
 
 [build]
   writeStats = true
+
+[menu]
+  [[menu.main]]
+    name = "My Portfolio"
+    url = "/"
+    pre = "🗂️"
+    weight = 10
+
+  [[menu.main]]
+    name = "My Resume"
+    url = "/resume/"
+    pre = "📝"
+    weight = 20
+  
+  [[menu.main]]
+    name = "Contact Me"
+    url = "/contact/"
+    pre = "📠"
+    weight = 30
