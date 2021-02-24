@@ -2,10 +2,8 @@
     {{ range .Pages }}
     <a class="flex flex-col h-full bg-white border rounded shadow transform transition-transform hover:scale-105"
         href="{{ .Permalink }}">
-        {{ $params := .Params }}
-        {{ range first 1 (where (readDir (printf "assets/%s" $params.images)) "IsDir" false) }}
-        {{ $img := resources.Get (printf "%s/%s" $params.images .Name) }}
-        {{ $img := $img.Fill "520x300 top" }}
+        {{ range first 1 .Resources }}
+        {{ $img := .Fill "520x300 top" }}
         <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
         {{ end }}
 

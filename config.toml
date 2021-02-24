@@ -2,9 +2,6 @@ baseURL = "https://atwood.io"
 languageCode = "en-us"
 title = "Daniel Atwood"
 
-[build]
-  writeStats = true
-
 [menu]
   [[menu.main]]
     name = "My Portfolio"
