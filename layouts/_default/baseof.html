@@ -23,6 +23,9 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+
+
+    {{ block "head" . }}{{ end }}
 </head>
 
 <body id="{{ .Kind }}" class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800">
