@@ -1,5 +1,41 @@
 {{ define "main" }}
+<div class="block sm:flex flex-row items-center mb-10">
+    {{ $img := resources.Get "img/profile.jpg" }}
+    <img class="max-h-48 rounded mb-4 mr-6" src="{{ $img.Permalink }}" alt="Daniel Atwood">
+    <div class="max-w-md">
+        <h3 class="mb-1 text-lg font-display font-bold">Daniel Atwood</h3>
+        <div class="pl-2.5">
+            <p class="mb-4">Full Stack Web Developer</p>
+        </div>
+        <h4 class="mb-1 font-display font-bold">Experience in</h4>
+        <p class="pl-2.5 mb-4">
+            Html, CSS, JavaScript,
+            PHP, Python, GO,
+            WordPress, Hugo, Svelte,
+            Apache, NGINX,
+            MySQL, MariaDB
+        </p>
+        {{ with .Content }}
+        <h4 class="mb-1 font-display font-bold">About Me</h4>
+        <p class="pl-2.5 text-sm">{{ . }}</p>
+        {{ end }}
+    </div>
+
+    {{/* <div>
+        <h3 class="mt-5 mb-1 text-lg font-display font-bold">Contact</h3>
+        <form class="grid gap-2.5" method="POST" netlify>
+            <input class="w-full p-2.5 border border-gray-300 rounded" type="text" name="name" placeholder="Name"
+                required>
+            <input class="w-full p-2.5 border border-gray-300 rounded" type="email" name="email" placeholder="Email"
+                required>
+            <textarea class="w-full p-2.5 border border-gray-300 rounded resize-y" name="message" placeholder="Inquiry"
+                required></textarea>
+            <button class="w-full p-2.5 border border-gray-300 rounded" type="submit">Submit</button>
+        </form>
+    </div> */}}
+</div>
+
+<h2 class="mb-4 text-2xl font-display font-bold">Portfolio</h2>
 {{ with .GetPage "projects" }}
-{{ partial "projects" . }}
-{{ end }}
+{{ partial "projects" . }}{{ end }}
 {{ end }}

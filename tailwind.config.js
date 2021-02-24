@@ -6,8 +6,13 @@ module.exports = {
       display: ['Lato', 'sans-serif'],
       body: ['Montserrat', 'sans-serif'],
     },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'dark': '#26142a',
+    }),
     extend: {
       backgroundImage: theme => ({
+        ...theme('colors'),
         'main': 'linear-gradient(#f9f9f9bb, #f9f9f9bb), url("/img/y-so-serious-white.png")',
       }),
       backgroundOpacity: ['main'],
