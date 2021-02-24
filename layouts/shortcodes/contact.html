@@ -8,6 +8,8 @@
 {{ end }}
 
 <form id="contact" class="max-w-md" action="/api/contact" method="POST">
+    <input type="hidden" name="_form_name" value="contact">
+
     <label>
         Name
         <input type="text" name="name" required>
