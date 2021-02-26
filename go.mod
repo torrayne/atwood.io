@@ -1,5 +1,5 @@
-module atwood.io/atwood.io
+module github.com/djatwood/atwood.io
 
-go 1.15
+go 1.16
 
-require github.com/djatwood/formailer v0.2.0
+require github.com/djatwood/formailer v0.3.0
