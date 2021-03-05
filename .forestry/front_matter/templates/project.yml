@@ -10,9 +10,6 @@ fields:
   name: date
   label: Date
 - type: text
-  name: images
-  label: Images
-- type: text
   name: link
   label: Link
 - type: text
