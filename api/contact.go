@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/djatwood/formailer"
+	"github.com/djatwood/formailer/handlers"
 )
 
 func Contact(w http.ResponseWriter, r *http.Request) {
@@ -16,5 +17,5 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		Redirect: "/thank-you/",
 	})
 
-	f.Vercel(w, r)
+	handlers.Vercel(&f, w, r)
 }
