@@ -1,13 +1,12 @@
 package api
 
 import (
-	"net/http"
-
+	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/djatwood/formailer"
 	"github.com/djatwood/formailer/handlers"
 )
 
-func Contact(w http.ResponseWriter, r *http.Request) {
+func main() {
 	f := make(formailer.Config)
 	f.Set(&formailer.Form{
 		Name:     "Contact",
@@ -17,5 +16,5 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 		Redirect: "/thank-you/",
 	})
 
-	handlers.Vercel(&f, w, r)
+	lambda.Start(handlers.Netlify(&f))
 }
