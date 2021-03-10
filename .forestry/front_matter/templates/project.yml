@@ -18,3 +18,5 @@ fields:
 - type: list
   name: categories
   label: Categories
+pages:
+- content/_index.md
