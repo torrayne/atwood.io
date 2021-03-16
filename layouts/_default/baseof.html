@@ -11,7 +11,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <title>{{ .Site.Title }}</title>
+    <!-- Primary Meta Tags -->
+    {{ $socialImage := resources.Get "img/social.png" }}
+
+    <title>{{ .Site.Title }} - {{ .Title }}</title>
+    <meta name="title" content="Daniel Atwood">
+    <meta name="description" content="{{ .Site.Params.siteDescription }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.siteDescription }}">
+    <meta property="og:image" content="{{ $socialImage.Permalink }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ .Permalink }}">
+    <meta property="twitter:title" content="{{ .Site.Title }}">
+    <meta property="twitter:description" content="{{ .Site.Params.siteDescription }}">
+    <meta property="twitter:image" content="{{ $socialImage.Permalink }}">
 
     {{ $styles := resources.Get "css/main.css" | postCSS }}
     {{ if .Site.IsServer }}
