@@ -2,7 +2,7 @@
     {{ range .Pages }}
     <a class="flex flex-col h-full bg-white border rounded overflow-hidden shadow transform transition-transform lg:hover:scale-105"
         href="{{ .Permalink }}">
-        {{ range first 1 .Resources }}
+        {{ range first 1 (.Resources.Match "images/*") }}
         {{ $img := .Fill "520x300 top" }}
         <img class="border-b" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
         {{ end }}
