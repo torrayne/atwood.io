@@ -1,6 +1,6 @@
 - name: GitHub
-  icon: img/GitHub-Mark-Light-32px.png
+  icon: img/github.svg
   link: https://github.com/djatwood
 - name: GitLab
-  icon: img/gitlab-icon-1-color-white-rgb.svg
+  icon: img/gitlab.svg
   link: https://gitlab.com/datwood
