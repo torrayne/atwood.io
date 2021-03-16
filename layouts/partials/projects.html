@@ -4,7 +4,7 @@
         href="{{ .Permalink }}">
         {{ range first 1 .Resources }}
         {{ $img := .Fill "520x300 top" }}
-        <img id="featured-image" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+        <img class="border-b" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
         {{ end }}
 
         <div class="flex flex-col flex-grow justify-between p-4">
