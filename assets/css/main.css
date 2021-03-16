@@ -6,14 +6,14 @@
     font-family: Lato;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/Lato-Bold.ttf')  format('truetype');
+    src: url('/fonts/Lato-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: Montserrat;
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/Montserrat-Regular.ttf')  format('truetype');
+    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
 
@@ -21,6 +21,8 @@ label {
     @apply block mb-4 leading-loose;
 }
 
-input, textarea, form button {
+input,
+textarea,
+form button {
     @apply block w-full px-4 py-2 border rounded bg-white leading-normal focus:border-green-300;
 }
