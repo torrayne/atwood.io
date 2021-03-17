@@ -11,12 +11,19 @@
 {{ define "main" }}
 {{ .Content }}
 
-<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-wrap md:flex-nowrap -mx-4" data-colcade="columns: .masonry-col, items: .masonry-item">
+    <div class="masonry-col flex-grow"></div>
+    <div class="masonry-col hidden sm:block flex-grow"></div>
+    <div class="masonry-col hidden xl:block flex-grow"></div>
+    <div class="masonry-col hidden 2xl:block flex-grow"></div>
+
     {{ range .Resources.Match "images/*" }}
     {{ $img := .Resize "600x Linear" }}
-    <figure>
-        <caption>{{ index (split .Name ".") 1 }}</caption>
-        <img class="object-contain object-top border" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+    <figure class="masonry-item mx-4 mb-8">
+        <div class="border rounded shadow overflow-hidden">
+            <caption><span class="block p-2 border-b font-display">{{ index (split .Name ".") 1 }}</span></caption>
+            <img class="object-contain object-top" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+        </div>
     </figure>
     {{ end }}
 </div>

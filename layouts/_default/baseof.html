@@ -39,6 +39,9 @@
     {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
     {{ end }}
+
+    {{ $scripts := resources.Get "js/colcade.js" }}
+    <script defer src="{{ $scripts.Permalink }}"></script>
 </head>
 
 <body id="{{ .Kind }}" class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800">
