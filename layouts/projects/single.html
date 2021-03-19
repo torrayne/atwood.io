@@ -12,10 +12,10 @@
 {{ .Content }}
 
 <div class="flex flex-wrap md:flex-nowrap -mx-4" data-colcade="columns: .masonry-col, items: .masonry-item">
-    <div class="masonry-col flex-grow"></div>
-    <div class="masonry-col hidden sm:block flex-grow"></div>
-    <div class="masonry-col hidden xl:block flex-grow"></div>
-    <div class="masonry-col hidden 2xl:block flex-grow"></div>
+    <div class="masonry-col w-full max-w-xl"></div>
+    <div class="masonry-col w-full max-w-xl hidden sm:block"></div>
+    <div class="masonry-col w-full max-w-xl hidden xl:block"></div>
+    <div class="masonry-col w-full max-w-xl hidden 2xl:block"></div>
 
     {{ range .Resources.Match "images/*" }}
     {{ $img := .Resize "600x Linear" }}
