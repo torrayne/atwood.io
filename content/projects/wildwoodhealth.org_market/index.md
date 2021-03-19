@@ -8,4 +8,8 @@ categories:
 - "Gulp"
 - "Linux"
 - "NGINX"
+resources:
+- src: images/1.Landing Page.jpg
+  params:
+    link: https://wildwoodhealth.org/wnfm/
 ---
