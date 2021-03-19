@@ -27,7 +27,7 @@
     <div class="masonry-col w-full max-w-xl hidden xl:block"></div>
     <div class="masonry-col w-full max-w-xl hidden 2xl:block"></div>
 
-    {{ $captionClasses := "flex items-center p-2 border-b font-display" }}
+    {{ $captionClasses := "flex justify-between items-center p-2 border-b font-display" }}
     {{ range .Resources.Match "images/*" }}
     {{ $img := .Resize "600x Linear" }}
     <figure class="masonry-item mx-4 mb-8">
