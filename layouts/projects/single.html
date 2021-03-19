@@ -17,11 +17,21 @@
     <div class="masonry-col w-full max-w-xl hidden xl:block"></div>
     <div class="masonry-col w-full max-w-xl hidden 2xl:block"></div>
 
+    {{ $captionClasses := "block p-2 border-b font-display" }}
     {{ range .Resources.Match "images/*" }}
     {{ $img := .Resize "600x Linear" }}
     <figure class="masonry-item mx-4 mb-8">
         <div class="border rounded shadow overflow-hidden">
-            <caption><span class="block p-2 border-b font-display">{{ index (split .Name ".") 1 }}</span></caption>
+            <caption>
+                {{ $name := index (split .Name ".") 1 }}
+                {{ if not .Params.link }}
+                <span class="{{ $captionClasses }}">{{ $name }}</span>
+                {{ else }}
+                <a href="{{ .Params.link }}" class="{{ $captionClasses }}" target="_blank" rel="noopener noreferrer">
+                    {{ $name }}
+                </a>
+                {{ end}}
+            </caption>
             <img class="object-contain object-top" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
         </div>
     </figure>
