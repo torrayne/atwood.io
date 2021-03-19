@@ -8,12 +8,16 @@ import (
 )
 
 func Contact(w http.ResponseWriter, r *http.Request) {
-	f := make(formailer.Forms)
-	f.Add("contact", formailer.Email{
+	contact := formailer.Form{
+		Name:     "contact",
+		Redirect: "/thank-you/",
+	}
+	contact.AddEmail(formailer.Email{
 		To:      "daniel@atwood.io",
 		From:    `"Atwood.io" <daniel@atwood.io>`,
 		Subject: "New Contact Form Submission",
 	})
 
-	handlers.Vercel(f, w, r)
+	formailer.Add(contact)
+	handlers.Vercel(formailer.DefaultConfig, w, r)
 }
