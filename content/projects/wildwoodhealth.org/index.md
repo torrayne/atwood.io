@@ -8,4 +8,23 @@ categories:
 - "Linux"
 - "NGINX"
 - "MariaDB"
+resources:
+- src: images/1.Home.jpg
+  params:
+    link: https://wildwoodhealth.org
+- src: images/2.Departments.png
+  params:
+    link: https://wildwoodhealth.org/departments/
+- src: images/3.Careers.png
+  params:
+    link: https://wildwoodhealth.org/careers/
+- src: images/4.News.png
+  params:
+    link: https://wildwoodhealth.org/news/
+- src: images/5.About.png
+  params:
+    link: https://wildwoodhealth.org/about/
+- src: images/6.Contact.png
+  params:
+    link: https://wildwoodhealth.org/contact/
 ---
