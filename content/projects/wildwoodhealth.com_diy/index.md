@@ -8,4 +8,8 @@ categories:
 - "Svelte"
 - "Linux"
 - "NGINX"
+resources:
+- src: images/1.Landing Page.jpg
+  params:
+    link: archived/
 ---
