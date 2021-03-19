@@ -1,5 +1,15 @@
 {{ define "header" }}
-<p>URL: <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Params.link }} ⬈</a></p>
+{{ $icon := resources.Get "img/external-link.svg" }}
+{{ .Scratch.SetInMap "icons" "external-link" $icon.Content }}
+
+<p class="flex">URL:
+    <a href="{{ .Params.link }}" class="flex items-center ml-1" target="_blank" rel="noopener">
+        {{ .Params.link }}
+        <span class="h-5 ml-1">
+            {{- index (.Scratch.Get "icons") "external-link" | safeHTML }}
+        </span>
+    </a>
+</p>
 <p><a class="hover:underline" href="/categories">Categories</a>:
     {{- range $index, $value := sort .Params.categories -}}
     {{ if $index }},{{ end }}
@@ -17,7 +27,7 @@
     <div class="masonry-col w-full max-w-xl hidden xl:block"></div>
     <div class="masonry-col w-full max-w-xl hidden 2xl:block"></div>
 
-    {{ $captionClasses := "block p-2 border-b font-display" }}
+    {{ $captionClasses := "flex items-center p-2 border-b font-display" }}
     {{ range .Resources.Match "images/*" }}
     {{ $img := .Resize "600x Linear" }}
     <figure class="masonry-item mx-4 mb-8">
@@ -29,6 +39,9 @@
                 {{ else }}
                 <a href="{{ .Params.link }}" class="{{ $captionClasses }}" target="_blank" rel="noopener noreferrer">
                     {{ $name }}
+                    <span class="h-4 ml-1">
+                        {{- index ($.Scratch.Get "icons") "external-link" | safeHTML }}
+                    </span>
                 </a>
                 {{ end}}
             </caption>

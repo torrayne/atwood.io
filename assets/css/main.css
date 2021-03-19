@@ -26,3 +26,8 @@ textarea,
 form button {
     @apply block w-full px-4 py-2 border rounded bg-white leading-normal focus:border-green-300;
 }
+
+.feather {
+    max-height: 100%;
+    stroke: currentColor;
+}
