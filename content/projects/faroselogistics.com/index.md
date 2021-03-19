@@ -8,4 +8,20 @@ categories:
 - "Linux"
 - "LiteSpeed"
 - "MySQL"
+resources:
+- src: images/1.Home.jpg
+  params:
+    link: https://faroselogistics.com
+- src: images/2.Capabilities.jpg
+  params:
+    link: https://faroselogistics.com/capabilities/
+- src: images/3.Clients.png
+  params:
+    link: https://faroselogistics.com/clients/
+- src: images/4.Careers.png
+  params:
+    link: https://faroselogistics.com/careers/
+- src: images/5.Contact Us.png
+  params:
+    link: https://faroselogistics.com/contact-us/
 ---
