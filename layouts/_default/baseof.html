@@ -40,7 +40,9 @@
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
     {{ end }}
 
-    {{ $scripts := resources.Get "js/colcade.js" }}
+    {{ $scripts := resources.Match "js/dep/*.js" | resources.Concat "js/dep.js" }}
+    <script defer src="{{ $scripts.Permalink }}"></script>
+    {{ $scripts := resources.Match "js/*.js" | resources.Concat "js/bundle.js" }}
     <script defer src="{{ $scripts.Permalink }}"></script>
 </head>
 

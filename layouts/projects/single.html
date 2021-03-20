@@ -45,10 +45,12 @@
                 </a>
                 {{ end}}
             </caption>
-            <img class="object-contain object-top" src="{{ $img.Permalink }}" alt="{{ $.Title }}">
+            <img class="object-contain object-top" src="{{ $img.Permalink }}" alt="{{ $.Title }}"
+            data-image-opened="{{ .Permalink }}">
         </div>
     </figure>
     {{ end }}
 </div>
 
+<div class="delegate"></div>
 {{ end }}
