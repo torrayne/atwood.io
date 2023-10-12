@@ -11,6 +11,19 @@
                         </a>
                     </li>
                     {{ end }}
+
+                    <li class="border-b my-4"></li>
+
+                    {{ range .Site.Data.social }}
+                    {{ $img := resources.Get .icon }}
+                    <li class="mb-2">
+                        <a class="flex gap-1 lg:transform transition-transform hover:scale-105" href="{{ .link }}"
+                            target="_blank" rel="noopener noreferrer">
+                            <img class="w-4" src="{{ $img.Permalink }}" alt="{{ .name }}">
+                            {{ .name }}
+                        </a>
+                    </li>
+                    {{ end }}
                 </ul>
             </nav>
             <div class="hidden lg:block">
@@ -24,15 +37,6 @@
                     {{ end }}
                 </ul>
             </div>
-        </div>
-
-        <div class="flex flex-col sm:flex-row">
-            {{ range .Site.Data.social }}
-            {{ $img := resources.Get .icon }}
-            <a class="m-4" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
-                <img class="max-h-8" src="{{ $img.Permalink }}" alt="{{ .name }}">
-            </a>
-            {{ end }}
         </div>
     </div>
 </aside>

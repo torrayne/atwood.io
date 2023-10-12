@@ -15,7 +15,7 @@
     {{ $socialImage := resources.Get "img/social.png" }}
 
     <title>{{ .Site.Title }} - {{ .Title }}</title>
-    <meta name="title" content="Daniel Atwood">
+    <meta name="title" content="{{ .Site.Title }} - {{ .Title }}">
     <meta name="description" content="{{ .Site.Params.description }}">
 
     <!-- Open Graph / Facebook -->

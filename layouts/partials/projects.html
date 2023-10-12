@@ -1,10 +1,11 @@
 <div class="grid grid-cols-projects gap-4">
     {{ range .Pages }}
-    <a class="flex flex-col h-full bg-white border rounded overflow-hidden shadow transform transition-transform lg:hover:scale-105"
+    <a class="flex flex-col h-full bg-white border rounded-xl overflow-hidden shadow transform transition-transform lg:hover:scale-105"
         href="{{ .Permalink }}">
         {{ range first 1 (.Resources.Match "images/*") }}
         {{ $img := .Fill "520x300 top" }}
-        <img class="border-b" src="{{ $img.Permalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
+        <img class="border-b" src="{{ $img.Permalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}"
+            height="{{ $img.Height }}">
         {{ end }}
 
         <div class="flex flex-col flex-grow justify-between p-4">

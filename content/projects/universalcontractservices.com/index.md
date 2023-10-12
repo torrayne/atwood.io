@@ -2,7 +2,7 @@
 title: Universal Contract Services
 date: 2021-02-03T21:03:08.000-05:00
 link: https://universalcontractservices.com
-src: https://github.com/djatwood/ucstn
+src: https://github.com/torrayne/ucstn
 categories:
 - Svelte
 - Netlify

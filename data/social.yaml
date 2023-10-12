@@ -1,6 +1,3 @@
 - name: GitHub
   icon: img/github.svg
-  link: https://github.com/djatwood
-- name: GitLab
-  icon: img/gitlab.svg
-  link: https://gitlab.com/datwood
+  link: https://github.com/torrayne
