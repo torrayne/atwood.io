@@ -1,34 +1,48 @@
-<div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
-  <div>
-    <div class="block sm:flex flex-row items-center mb-10">
+<div class="lg:h-screen flex lg:flex-col lg:gap-10 justify-between px-12 py-10">
+  <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-4">
       {{ $img := resources.Get "img/profile.jpg" }}
       <img
-        class="rounded-3xl mb-4 mr-6"
+        class="rounded-xl mr-6"
         src="{{ $img.Permalink }}"
         alt="Rayne"
-        width="192"
-        height="192"
+        width="250"
+        height="250"
       />
-      <div class="max-w-md">
-        <h3 class="mb-1 text-lg font-display font-bold">Hi! I'm Rayne</h3>
-        <div class="pl-2.5">
-          <p class="mb-4">Full Stack Web Developer</p>
-        </div>
+
+      <h2 class="text-4xl leading-relaxed font-display font-bold">
+        Hi!
+        <br />
+        I'm Rayne
+      </h2>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div>
+        <h4 class="mb-2 font-display font-bold">About me</h4>
+        <p>
+          Software engineer solving interesting problems with interesting people
+        </p>
+      </div>
+      <div>
+        <h4 class="mb-2 font-display font-bold">Experience in</h4>
+        <p>
+          Html, CSS, JavaScript, PHP, Python, GO, WordPress, Hugo, Svelte,
+          Apache, NGINX, MySQL, MariaDB
+        </p>
       </div>
     </div>
-    <h4 class="mb-1 font-display font-bold">Experience in</h4>
-    <p class="pl-2.5 mb-4">
-      Html, CSS, JavaScript, PHP, Python, GO, WordPress, Hugo, Svelte, Apache,
-      NGINX, MySQL, MariaDB
-    </p>
   </div>
+
   <div>
-    <nav class="lg:mb-10">
-      <ul class="ml-2">
+    <nav>
+      <ul class="ml-2 font-display">
+        <li class="border-b my-4"></li>
+
         {{ range .Site.Menus.main }}
           <li class="mb-2">
             <a
-              class="block lg:transform transition-transform hover:scale-105"
+              class="block lg:transform transition-transform hover:scale-105 origin-left"
               href="{{ .URL }}"
             >
               {{ .Pre }}
@@ -44,7 +58,7 @@
           {{ $img := resources.Get .icon }}
           <li class="mb-2">
             <a
-              class="flex gap-1 lg:transform transition-transform hover:scale-105"
+              class="flex gap-2 lg:transform transition-transform hover:scale-105 origin-left"
               href="{{ .link }}"
               target="_blank"
               rel="noopener noreferrer"

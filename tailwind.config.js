@@ -7,8 +7,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      display: ['Lato', 'sans-serif'],
-      body: ['Montserrat', 'sans-serif'],
+      display: ['Space Mono', 'serif'],
+      body: ['Bitter', 'sans-serif'],
     },
     backgroundColor: (theme) => ({
       ...theme('colors'),
