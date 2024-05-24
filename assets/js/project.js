@@ -1,3 +1,3 @@
 new MiniLightbox({
-    selector: ".masonry-item img",
+  selector: '.masonry-item img',
 });
