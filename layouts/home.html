@@ -1,6 +1,3 @@
 {{ define "main" }}
-  <h2 class="mb-4 text-2xl font-display font-bold">Portfolio</h2>
-  {{ with .GetPage "projects" }}
-    {{ partial "projects" . }}
-  {{ end }}
+  <embed id="resumePDF" class="w-full mt-4" src="/resume.pdf" />
 {{ end }}

@@ -1,12 +1,9 @@
 ---
-title: Portfolio
-date: 2019-08-27T15:24:17.000-07:00
-link: ''
-src: ''
-categories: []
+title: My Resume
+date: 2020-11-29T15:16:35.000-05:00
 menu:
   main:
-    name: My Portfolio
-    pre: "\U0001F5C2️"
-    weight: 1
+    name: My Resume
+    pre: "\U0001F4DD"
+    weight: 2
 ---

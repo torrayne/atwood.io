@@ -3,35 +3,40 @@
 @tailwind utilities;
 
 label {
-    @apply block mb-4 leading-loose;
+  @apply block mb-4 leading-loose;
 }
 
 input,
 textarea,
 form button {
-    @apply block w-full px-4 py-2 border rounded bg-white leading-normal focus:border-green-300;
+  @apply block w-full px-4 py-2 border rounded bg-white leading-normal focus:border-green-300;
 }
 
 .feather {
-    max-height: 100%;
-    stroke: currentColor;
+  max-height: 100%;
+  stroke: currentColor;
 }
 
 .ml_box {
-    @apply fixed top-0 right-0 bottom-0 left-0 m-4 mt-8 sm:m-16 overflow-x-visible overflow-y-scroll;
+  @apply fixed top-0 right-0 bottom-0 left-0 m-4 mt-8 sm:m-16 overflow-x-visible overflow-y-scroll;
 }
 
 .ml_box::before {
-    content: "✖ Close";
-    @apply fixed top-0 right-0 block mx-4 mt-1 sm:mx-16 sm:mt-8 text-right text-white font-display font-bold cursor-pointer z-10;
+  content: '✖ Close';
+  @apply fixed top-0 right-0 block mx-4 mt-1 sm:mx-16 sm:mt-8 text-right text-white font-display font-bold cursor-pointer z-10;
 }
 
 .ml_box::after {
-    content: "";
-    background: #0009;
-    @apply fixed block top-0 right-0 bottom-0 left-0;
+  content: '';
+  background: #0009;
+  @apply fixed block top-0 right-0 bottom-0 left-0;
 }
 
 .ml_box img {
-    @apply relative z-10;
+  @apply relative z-10;
+}
+
+#resumePDF {
+  max-height: 1371px;
+  aspect-ratio: 9 / 11.7;
 }
