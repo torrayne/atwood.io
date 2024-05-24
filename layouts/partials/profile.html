@@ -2,7 +2,6 @@
     <div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
         <div>
             <nav class="lg:mb-10">
-                <h1 class="mb-2 text-3xl font-display font-bold">Atwood.io</h1>
                 <ul class="ml-2">
                     {{ range .Site.Menus.main}}
                     <li class="mb-2">
@@ -26,17 +25,6 @@
                     {{ end }}
                 </ul>
             </nav>
-            <div class="hidden lg:block">
-                <h3 class="mt-4 mb-1 text-lg font-display font-bold">
-                    <a href="/categories">Project Categories</a>
-                </h3>
-                <ul class="ml-2">
-                    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                    <li><a href="/categories/{{ $name | urlize }}">{{ $name | title }} <sup>{{ len .Pages}}</sup></a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
         </div>
     </div>
 </aside>
