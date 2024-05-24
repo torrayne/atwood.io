@@ -1,39 +1,60 @@
-<aside class="flex-shrink-0 lg:border-r overflow-y-auto bg-dark text-white">
-  <div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
-    <div>
-      <nav class="lg:mb-10">
-        <ul class="ml-2">
-          {{ range .Site.Menus.main }}
-            <li class="mb-2">
-              <a
-                class="block lg:transform transition-transform hover:scale-105"
-                href="{{ .URL }}"
-              >
-                {{ .Pre }}
-                {{ .Name }}
-              </a>
-            </li>
-          {{ end }}
-
-
-          <li class="border-b my-4"></li>
-
-          {{ range .Site.Data.social }}
-            {{ $img := resources.Get .icon }}
-            <li class="mb-2">
-              <a
-                class="flex gap-1 lg:transform transition-transform hover:scale-105"
-                href="{{ .link }}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img class="w-4" src="{{ $img.Permalink }}" alt="{{ .name }}" />
-                {{ .name }}
-              </a>
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
+<div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
+  <div>
+    <div class="block sm:flex flex-row items-center mb-10">
+      {{ $img := resources.Get "img/profile.jpg" }}
+      <img
+        class="rounded-3xl mb-4 mr-6"
+        src="{{ $img.Permalink }}"
+        alt="Rayne"
+        width="192"
+        height="192"
+      />
+      <div class="max-w-md">
+        <h3 class="mb-1 text-lg font-display font-bold">Hi! I'm Rayne</h3>
+        <div class="pl-2.5">
+          <p class="mb-4">Full Stack Web Developer</p>
+        </div>
+      </div>
     </div>
+    <h4 class="mb-1 font-display font-bold">Experience in</h4>
+    <p class="pl-2.5 mb-4">
+      Html, CSS, JavaScript, PHP, Python, GO, WordPress, Hugo, Svelte, Apache,
+      NGINX, MySQL, MariaDB
+    </p>
   </div>
-</aside>
+  <div>
+    <nav class="lg:mb-10">
+      <ul class="ml-2">
+        {{ range .Site.Menus.main }}
+          <li class="mb-2">
+            <a
+              class="block lg:transform transition-transform hover:scale-105"
+              href="{{ .URL }}"
+            >
+              {{ .Pre }}
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+
+
+        <li class="border-b my-4"></li>
+
+        {{ range .Site.Data.social }}
+          {{ $img := resources.Get .icon }}
+          <li class="mb-2">
+            <a
+              class="flex gap-1 lg:transform transition-transform hover:scale-105"
+              href="{{ .link }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="w-4" src="{{ $img.Permalink }}" alt="{{ .name }}" />
+              {{ .name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</div>
