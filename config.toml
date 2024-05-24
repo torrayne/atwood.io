@@ -2,5 +2,10 @@ baseURL = "https://atwood.io"
 languageCode = "en-us"
 title = "Rayne ✨"
 
+disableKinds = ["taxonomy"]
+
+[Taxonomies]
+
 [params]
 description = "I'm a full stack software engineer with a love of solving problems"
+
