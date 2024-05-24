@@ -9,5 +9,4 @@ menu:
     name: My Portfolio
     pre: "\U0001F5C2️"
     weight: 1
-
 ---

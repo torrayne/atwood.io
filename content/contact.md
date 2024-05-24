@@ -5,6 +5,6 @@ menu:
   main:
     pre: "\U0001F4E0"
     weight: 3
-
 ---
+
 {{< contact >}}

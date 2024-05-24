@@ -1,24 +1,37 @@
 <div class="grid grid-cols-projects gap-4">
-    {{ range .Pages }}
-    <a class="flex flex-col h-full bg-white border rounded-xl overflow-hidden shadow transform transition-transform lg:hover:scale-105"
-        href="{{ .Permalink }}">
-        {{ range first 1 (.Resources.Match "images/*") }}
+  {{ range .Pages }}
+    <a
+      class="flex flex-col h-full bg-white border rounded-xl overflow-hidden shadow transform transition-transform lg:hover:scale-105"
+      href="{{ .Permalink }}"
+    >
+      {{ range first 1 (.Resources.Match "images/*") }}
         {{ $img := .Fill "520x300 top" }}
-        <img class="border-b" src="{{ $img.Permalink }}" alt="{{ $.Title }}" width="{{ $img.Width }}"
-            height="{{ $img.Height }}">
-        {{ end }}
+        <img
+          class="border-b"
+          src="{{ $img.Permalink }}"
+          alt="{{ $.Title }}"
+          width="{{ $img.Width }}"
+          height="{{ $img.Height }}"
+        />
+      {{ end }}
 
-        <div class="flex flex-col flex-grow justify-between p-4">
-            <p class="title">{{ .Title }}</p>
-            <div class="mt-4 text-sm">
-                {{ range first 1 .Params.categories }}
-                {{ if (fileExists (printf "static/img/%s.svg" . )) }}
-                <img class="inline w-5" src="/img/{{ . }}.svg" alt="{{ . }}" title="{{ . }}">
-                {{ end }}
-                <span class="align-middle">{{ . }}</span>
-                {{ end }}
-            </div>
+
+      <div class="flex flex-col flex-grow justify-between p-4">
+        <p class="title">{{ .Title }}</p>
+        <div class="mt-4 text-sm">
+          {{ range first 1 .Params.categories }}
+            {{ if (fileExists (printf "static/img/%s.svg" . )) }}
+              <img
+                class="inline w-5"
+                src="/img/{{ . }}.svg"
+                alt="{{ . }}"
+                title="{{ . }}"
+              />
+            {{ end }}
+            <span class="align-middle">{{ . }}</span>
+          {{ end }}
         </div>
+      </div>
     </a>
-    {{ end }}
+  {{ end }}
 </div>

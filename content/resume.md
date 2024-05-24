@@ -6,8 +6,8 @@ menu:
     name: My Resume
     pre: "\U0001F4DD"
     weight: 2
-
 ---
+
 {{< link href="/resume.pdf" target="_blank" >}}Open in a new tab{{< /link>}}
 
 {{< frame src="/resume.pdf" >}}

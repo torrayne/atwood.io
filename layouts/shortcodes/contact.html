@@ -1,26 +1,32 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
-    function onSubmit(token) {
-        document.getElementById("contact").submit();
-    }
+  function onSubmit(token) {
+    document.getElementById('contact').submit();
+  }
 </script>
 
 <form id="contact" class="max-w-md" action="/api/contact" method="POST">
-    <input type="hidden" name="_form_name" value="contact">
+  <input type="hidden" name="_form_name" value="contact" />
 
-    <label>
-        Name
-        <input type="text" name="name" required>
-    </label>
-    <label>
-        Email
-        <input type="email" name="email" required>
-    </label>
-    <label>
-        Inquiry
-        <textarea name="inquiry" cols="30" rows="10" required></textarea>
-    </label>
+  <label>
+    Name
+    <input type="text" name="name" required />
+  </label>
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    Inquiry
+    <textarea name="inquiry" cols="30" rows="10" required></textarea>
+  </label>
 
-    <button class="g-recaptcha" data-sitekey="6LdYcWUaAAAAAPzHoHFql2bwXRN5Wv-EmsenXvTr" data-callback='onSubmit'
-        data-action='submit'>Submit</button>
+  <button
+    class="g-recaptcha"
+    data-sitekey="6LdYcWUaAAAAAPzHoHFql2bwXRN5Wv-EmsenXvTr"
+    data-callback="onSubmit"
+    data-action="submit"
+  >
+    Submit
+  </button>
 </form>

@@ -1,0 +1,14 @@
+{
+  "htmlWhitespaceSensitivity": "ignore",
+  "goTemplateBracketSpacing": true,
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "parser": "go-template"
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-go-template"],
+  "singleQuote": true
+}

@@ -1,7 +1,7 @@
 {{ define "main" }}
-<ol>
+  <ol>
     {{ range sort .Pages.ByTitle }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
     {{ end }}
-</ol>
+  </ol>
 {{ end }}

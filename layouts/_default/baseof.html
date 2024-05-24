@@ -1,67 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Primary Meta Tags -->
     {{ $socialImage := resources.Get "img/social.png" }}
 
+
     <title>{{ .Site.Title }} - {{ .Title }}</title>
-    <meta name="title" content="{{ .Site.Title }} - {{ .Title }}">
-    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="title" content="{{ .Site.Title }} - {{ .Title }}" />
+    <meta name="description" content="{{ .Site.Params.description }}" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:description" content="{{ .Site.Params.description }}">
-    <meta property="og:image" content="{{ $socialImage.Permalink }}">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:description" content="{{ .Site.Params.description }}" />
+    <meta property="og:image" content="{{ $socialImage.Permalink }}" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ .Permalink }}">
-    <meta property="twitter:title" content="{{ .Site.Title }}">
-    <meta property="twitter:description" content="{{ .Site.Params.description }}">
-    <meta property="twitter:image" content="{{ $socialImage.Permalink }}">
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ .Permalink }}" />
+    <meta property="twitter:title" content="{{ .Site.Title }}" />
+    <meta
+      property="twitter:description"
+      content="{{ .Site.Params.description }}"
+    />
+    <meta property="twitter:image" content="{{ $socialImage.Permalink }}" />
 
     {{ $styles := resources.Get "css/main.css" | postCSS }}
     {{ if hugo.IsServer }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
     {{ else }}
-    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+      {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+      <link
+        rel="stylesheet"
+        href="{{ $styles.RelPermalink }}"
+        integrity="{{ $styles.Data.Integrity }}"
+      />
     {{ end }}
 
     {{ $scripts := resources.Match "js/dep/*.js" | resources.Concat "js/dep.js" }}
     <script defer src="{{ $scripts.Permalink }}"></script>
     {{ $scripts := resources.Match "js/*.js" | resources.Concat "js/bundle.js" }}
     <script defer src="{{ $scripts.Permalink }}"></script>
-</head>
+  </head>
 
-<body id="{{ .Kind }}" class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800">
+  <body
+    id="{{ .Kind }}"
+    class="flex flex-col lg:flex-row max-w-full font-body font-light text-gray-800"
+  >
     {{ partial "profile" . }}
-    <main class="w-full lg:h-screen overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-25">
-        <div class="min-h- p-10">
-            <header class="mb-6">
-                {{ if not .IsHome }}
-                <h1 class="mb-2 text-3xl font-display font-bold">
-                    {{ if eq .Kind "term" }}{{ .Section | title }}:{{ end }}
-                    {{ .Title }}
-                </h1>
-                {{ end }}
-                {{ block "header" . }}{{ end }}
-            </header>
-            {{ block "main" . }}{{ end }}
-        </div>
+    <main
+      class="w-full lg:h-screen overflow-x-hidden overflow-y-auto bg-gray-100 bg-opacity-25"
+    >
+      <div class="min-h- p-10">
+        <header class="mb-6">
+          {{ if not .IsHome }}
+            <h1 class="mb-2 text-3xl font-display font-bold">
+              {{ if eq .Kind "term" }}{{ .Section | title }}:{{ end }}
+              {{ .Title }}
+            </h1>
+          {{ end }}
+          {{ block "header" . }}{{ end }}
+        </header>
+        {{ block "main" . }}{{ end }}
+      </div>
     </main>
-</body>
-
+  </body>
 </html>

@@ -1,30 +1,39 @@
 <aside class="flex-shrink-0 lg:border-r overflow-y-auto bg-dark text-white">
-    <div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
-        <div>
-            <nav class="lg:mb-10">
-                <ul class="ml-2">
-                    {{ range .Site.Menus.main}}
-                    <li class="mb-2">
-                        <a class="block lg:transform transition-transform hover:scale-105" href="{{ .URL }}">
-                            {{ .Pre }} {{ .Name }}
-                        </a>
-                    </li>
-                    {{ end }}
+  <div class="lg:h-screen flex lg:flex-col justify-between px-12 py-10">
+    <div>
+      <nav class="lg:mb-10">
+        <ul class="ml-2">
+          {{ range .Site.Menus.main }}
+            <li class="mb-2">
+              <a
+                class="block lg:transform transition-transform hover:scale-105"
+                href="{{ .URL }}"
+              >
+                {{ .Pre }}
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
 
-                    <li class="border-b my-4"></li>
 
-                    {{ range .Site.Data.social }}
-                    {{ $img := resources.Get .icon }}
-                    <li class="mb-2">
-                        <a class="flex gap-1 lg:transform transition-transform hover:scale-105" href="{{ .link }}"
-                            target="_blank" rel="noopener noreferrer">
-                            <img class="w-4" src="{{ $img.Permalink }}" alt="{{ .name }}">
-                            {{ .name }}
-                        </a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </nav>
-        </div>
+          <li class="border-b my-4"></li>
+
+          {{ range .Site.Data.social }}
+            {{ $img := resources.Get .icon }}
+            <li class="mb-2">
+              <a
+                class="flex gap-1 lg:transform transition-transform hover:scale-105"
+                href="{{ .link }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="w-4" src="{{ $img.Permalink }}" alt="{{ .name }}" />
+                {{ .name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
     </div>
+  </div>
 </aside>
