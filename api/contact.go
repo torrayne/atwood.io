@@ -12,8 +12,8 @@ func Contact(w http.ResponseWriter, r *http.Request) {
 	contact.Redirect = "/thank-you/"
 	contact.ReCAPTCHA = true
 	contact.AddEmail(formailer.Email{
-		To:      "daniel@atwood.io",
-		From:    `"Atwood.io" <daniel@atwood.io>`,
+		To:      "rayne@atwood.io",
+		From:    `"Atwood.io" <rayne@atwood.io>`,
 		Subject: "New Contact Form Submission",
 	})
 
